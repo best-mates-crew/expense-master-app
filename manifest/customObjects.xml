@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>EM_Expense__c</members>
+        <name>CustomObject</name>
+    </types>
+
+    <types>
+        <members>EM_Report__c</members>
+        <name>CustomObject</name>
+    </types>
+
+    <types>
+        <members>EM_Expense_Master_App</members>
+        <name>CustomApplication</name>
+    </types>
+
+    <types>
+        <members>*</members>
+        <name>CustomTabs</name>
+    </types>
+    
+    <version>52.0</version>
+</Package>
