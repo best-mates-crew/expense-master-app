@@ -16,6 +16,11 @@
     </types>
 
     <types>
+        <members>EM_Expense_Master_App</members>
+        <name>Flexipage</name>
+    </types>
+
+    <types>
         <members>*</members>
         <name>CustomTab</name>
     </types>
