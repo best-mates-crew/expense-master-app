@@ -17,7 +17,7 @@
 
     <types>
         <members>*</members>
-        <name>CustomTabs</name>
+        <name>CustomTab</name>
     </types>
     
     <version>52.0</version>
