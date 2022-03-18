@@ -4,15 +4,15 @@
         <members>EM_Expense__c</members>
         <name>CustomObject</name>
     </types>
-
+    
     <types>
         <members>EM_Report__c</members>
         <name>CustomObject</name>
     </types>
 
     <types>
-        <members>EM_Expense_Master_App</members>
-        <name>CustomApplication</name>
+        <members>*</members>
+        <name>CustomTab</name>
     </types>
 
     <types>
@@ -21,9 +21,9 @@
     </types>
 
     <types>
-        <members>*</members>
-        <name>CustomTab</name>
+        <members>EM_Expense_Master_App</members>
+        <name>CustomApplication</name>
     </types>
-    
+
     <version>52.0</version>
 </Package>
