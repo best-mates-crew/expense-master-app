@@ -11,12 +11,17 @@
     </types>
 
     <types>
+        <members>EM_Vendor__c</members>
+        <name>CustomObject</name>
+    </types>
+
+    <types>
         <members>*</members>
         <name>CustomTab</name>
     </types>
 
     <types>
-        <members>EM_Expense_Master_App</members>
+        <members>Expense_Master_App_UtilityBar</members>
         <name>Flexipage</name>
     </types>
 
@@ -26,13 +31,10 @@
     </types>
 
     <types>
-        <members>EM_Expense__c-EM_Expense</members>
+        <members>*</members>
         <name>Layout</name>
     </types>
-    <types>
-        <members>EM_Report__c-EM_Report</members>
-        <name>Layout</name>
-    </types>
+
 
     <version>52.0</version>
 </Package>

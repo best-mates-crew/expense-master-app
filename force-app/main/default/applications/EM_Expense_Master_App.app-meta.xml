@@ -12,6 +12,7 @@
     <navType>Standard</navType>
     <tabs>EM_Expense__c</tabs>
     <tabs>EM_Report__c</tabs>
+    <tabs>EM_Vendor__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Expense_Master_App_UtilityBar</utilityBar>
 </CustomApplication>
