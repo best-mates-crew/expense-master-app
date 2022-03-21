@@ -25,5 +25,14 @@
         <name>CustomApplication</name>
     </types>
 
+    <types>
+        <members>EM_Expense__c-EM_Expense</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>EM_Report__c-EM_Report</members>
+        <name>Layout</name>
+    </types>
+
     <version>52.0</version>
 </Package>
