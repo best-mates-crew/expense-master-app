@@ -12,7 +12,7 @@
             <sorted>false</sorted>
             <value>
                 <fullName>AUD</fullName>
-                <default>true</default>
+                <default>false</default>
                 <label>AUD</label>
             </value>
             <value>
@@ -72,7 +72,7 @@
             </value>
             <value>
                 <fullName>USD</fullName>
-                <default>false</default>
+                <default>true</default>
                 <label>USD</label>
             </value>
         </valueSetDefinition>

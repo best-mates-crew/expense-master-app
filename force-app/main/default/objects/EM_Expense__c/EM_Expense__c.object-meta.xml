@@ -156,8 +156,8 @@
     <externalSharingModel>Private</externalSharingModel>
     <label>EM_Expense</label>
     <nameField>
-        <displayFormat>E-{00000}</displayFormat>
-        <label>EM_Expense Name</label>
+        <displayFormat>EXP-{00000}</displayFormat>
+        <label>Expense Name</label>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>EM_Expenses</pluralLabel>

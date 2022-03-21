@@ -3,11 +3,14 @@
     <fullName>EM_Expense_List</fullName>
     <columns>NAME</columns>
     <columns>EM_Transaction_Amount__c</columns>
-    <columns>EM_Expense_Discription__c</columns>
+    <columns>EM_Reimbursement_Amount__c</columns>
+    <columns>EM_Transaction_Currency__c</columns>
+    <columns>EM_Purchase_Date__c</columns>
     <columns>EM_Purpose_Of_Expenses__c</columns>
+    <columns>EM_Vendor__c</columns>
+    <columns>EM_Reimbursement_By__c</columns>
     <columns>EM_Reimbursement_Status__c</columns>
-    <columns>CREATED_DATE</columns>
-    <columns>OBJECT_ID</columns>
+    <columns>EM_Expense_Discription__c</columns>
     <filterScope>Mine</filterScope>
     <label>Expense List</label>
 </ListView>
