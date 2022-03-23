@@ -155,8 +155,9 @@
     <externalSharingModel>Private</externalSharingModel>
     <label>EM_Report</label>
     <nameField>
-        <label>EM_Report Name</label>
-        <type>Text</type>
+        <displayFormat>REP-{00000}</displayFormat>
+        <label>Name</label>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>EM_Reports</pluralLabel>
     <searchLayouts></searchLayouts>
