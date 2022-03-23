@@ -12,8 +12,6 @@ const columns = [
 export default class EmAllReports extends LightningElement {
 	data;
 	columns = columns;
-	selectedRows;
-	_expensesInfo;
 
 	@wire(MessageContext)
 	messageContext;
@@ -24,9 +22,9 @@ export default class EmAllReports extends LightningElement {
 	}
 
 	getSelectedRows(event) {
-		this.selectedRows = event.detail.selectedRows;
+		const selectedRows = event.detail.selectedRows;
         
-        const payload = { reportsInformation: this.selectedRows };
+        const payload = { reportsInformation: selectedRows };
 		publish(this.messageContext, RECORD_SELECTED_CHANNEL, payload);
 	}
 
