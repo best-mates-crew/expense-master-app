@@ -1,11 +1,11 @@
 import { LightningElement } from 'lwc';
-import getReports from "@salesforce/apex/EMReportController.gerReports";
+import getExpenses from "@salesforce/apex/EMExpenseController.getExpenses";
 
 
     const columns = [
         { label: 'Report', fieldName: "reportName"},
         { label: 'Expense', fieldName: "expenseName"},
-        { label: 'Status', fieldName: "expenseStatus"}
+        { label: 'Expense Status', fieldName: "expenseStatus"},
     ];
 
 export default class EmReport extends LightningElement {
@@ -14,9 +14,8 @@ export default class EmReport extends LightningElement {
     columns= columns;
 
     async connectedCallback() {
-        this.data = await getReports();
+        this.data = await getExpenses();
         console.log('data: ', this.data) ;
     }
-
-
 }
+
