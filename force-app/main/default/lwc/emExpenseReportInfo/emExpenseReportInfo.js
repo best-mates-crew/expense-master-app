@@ -26,8 +26,6 @@ export default class EmExpenseReportInfo extends LightningElement {
         console.log('this.reportsInfo:', this.reportsInfo);
         console.log('message:', message);
     }
-
-
 }
 
 		// this._expensesInfo = this.selectedRows.map((e) => e.expenses.map((el) => " " + el.expenseName));
