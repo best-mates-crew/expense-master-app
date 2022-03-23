@@ -3,7 +3,7 @@ public with sharing class EMReportController {
 	@AuraEnabled(cacheable=true)
 	public static List<ReportWrapper> getReport() {
 		List<EM_Report__c> reportsData = [
-			SELECT Id, Name, (SELECT Id, Name, EM_Reimbursement_Status__c FROM EM_Expenses__r)
+			SELECT Id, Name, Status__c, (SELECT Id, Name, EM_Reimbursement_Status__c FROM EM_Expenses__r)
 			FROM EM_Report__c
 			WITH SECURITY_ENFORCED
 		];
@@ -18,7 +18,7 @@ public with sharing class EMReportController {
 				expenses.add(expense);
 			}
 
-			ReportWrapper report = new ReportWrapper(rep.id, rep.Name, expenses);
+			ReportWrapper report = new ReportWrapper(rep.id, rep.Name, rep.Status__c, expenses);
 			reports.add(report);
 		}
 		return reports;
@@ -30,10 +30,13 @@ public with sharing class EMReportController {
 		@AuraEnabled
 		public String name { get; set; }
 		@AuraEnabled
+		public String status { get; set; }
+		@AuraEnabled
 		public List<ExpenseWrapper> expenses { get; set; }
-		ReportWrapper(Id id, String name, List<ExpenseWrapper> expenses) {
+		ReportWrapper(Id id, String name, String status, List<ExpenseWrapper> expenses) {
 			this.id = id;
 			this.name = name;
+			this.status = status;
 			this.expenses = expenses;
 		}
 	}
