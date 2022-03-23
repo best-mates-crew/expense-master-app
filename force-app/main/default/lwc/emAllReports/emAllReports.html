@@ -1,6 +1,15 @@
 <!-- sldsValidatorIgnore -->
 <template>
 	<lightning-card variant="Narrow" title="Reports Information" icon-name="standard:account">
-		<lightning-datatable key-field="id" data={data} columns={columns}> </lightning-datatable>
+		<lightning-datatable
+			key-field="id"
+			data={data}
+			columns={columns}
+			onrowselection = {getSelectedRows}
+		>
+		</lightning-datatable>
+
+		<p>Expense name: {expenseName}</p>
+		<p>Expense status: {expenseStatus}</p>
 	</lightning-card>
 </template>
