@@ -24,7 +24,7 @@ export default class EmAllReports extends LightningElement {
 	getSelectedRows(event) {
 		const selectedRows = event.detail.selectedRows;
         
-        const payload = { reportsInformation: selectedRows };
+        const payload = { data : selectedRows };
 		publish(this.messageContext, RECORD_SELECTED_CHANNEL, payload);
 	}
 

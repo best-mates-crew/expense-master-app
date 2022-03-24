@@ -5,6 +5,8 @@ import RECORD_SELECTED_CHANNEL from '@salesforce/messageChannel/Record_Selected_
 export default class EmExpenseReportInfo extends LightningElement {
     subscription = null;
     _reportsInfo;
+    reports;
+    expenses;
 
     @wire(MessageContext)
     messageContext;
@@ -22,10 +24,14 @@ export default class EmExpenseReportInfo extends LightningElement {
     }
 
     handleMessage(message) {
-        this._reportsInfo = message;
-        console.log('this.reportsInfo:', this.reportsInfo);
-        console.log('message:', message);
+        this._reportsInfo = message.data;
+        console.log('message.data:', message.data);
+        this.reports = this._reportsInfo.map( e => e.Name );
+        console.log('this.reports:', this.reports);
+        
     }
+
+
 }
 
 		// this._expensesInfo = this.selectedRows.map((e) => e.expenses.map((el) => " " + el.expenseName));
