@@ -1,4 +1,7 @@
 public with sharing class EMReportController {
+    // MODEL
+    //EM_ReportModel
+    @deprecated
     @AuraEnabled(cacheable=true)
     public static List<ReportWrapper> getReport() {
         List<EM_Report__c> reportsData = [SELECT Id, Name, Status__c, EM_Total_Amount__c, (SELECT Id, Name, EM_Expense_Label__c, EM_Transaction_Amount__c, EM_Reimbursement_Amount__c, EM_Currency__c, EM_Reimbursement_Status__c, EM_Purchase_Date__c, EM_Reimbursement_By__c FROM EM_Expenses__r) FROM EM_Report__c WITH SECURITY_ENFORCED];
@@ -27,7 +30,9 @@ public with sharing class EMReportController {
         }
         return reports;
     }
-
+    // ENTITY
+    // EM_ReportEntity
+    @deprecated
     public class ReportWrapper {
         @AuraEnabled
         public Id id { get; set; }
@@ -39,6 +44,7 @@ public with sharing class EMReportController {
         public Decimal totalAmount { get; set; }
         @AuraEnabled
         public List<EMExpenseController.ExpenseWrapper> expenses { get; set; }
+        @deprecated
         public ReportWrapper(
 			Id id,
 			String name,

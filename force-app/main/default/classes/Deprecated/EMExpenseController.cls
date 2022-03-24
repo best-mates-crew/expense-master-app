@@ -1,4 +1,5 @@
 public with sharing class EMExpenseController {
+    
     @AuraEnabled(cacheable=true)
     public static List<ExpenseWrapper> getExpenses() {
         List<EM_Expense__c> expensesList = [SELECT Name, EM_Reimbursement_Status__c, EM_Report__r.Name FROM EM_Expense__c WITH SECURITY_ENFORCED];
