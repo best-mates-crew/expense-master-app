@@ -1,12 +1,13 @@
 import { LightningElement, wire } from "lwc";
-import getReport from "@salesforce/apex/EMReportController.getReport";
+import getReports from "@salesforce/apex/EM_ReportController.getReports";
 
 import { publish, MessageContext } from "lightning/messageService";
 import RECORD_SELECTED_CHANNEL from "@salesforce/messageChannel/Record_Selected__c";
 
 const columns = [
 	{ label: "Report", fieldName: "name" },
-	{ label: "Status", fieldName: "status" }
+	{ label: "Status", fieldName: "status" },
+	{ label: "Total Amount", fieldName: "totalAmount" }
 ];
 
 export default class EmAllReports extends LightningElement {
@@ -17,7 +18,7 @@ export default class EmAllReports extends LightningElement {
 	messageContext;
 
 	async connectedCallback() {
-		this.data = await getReport();
+		this.data = await getReports();
 		console.log("data: ", this.data);
 	}
 

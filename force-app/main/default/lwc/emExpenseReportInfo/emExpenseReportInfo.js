@@ -26,11 +26,9 @@ export default class EmExpenseReportInfo extends LightningElement {
     handleMessage(message) {
         this._reportsInfo = message.data;
         console.log('message.data:', message.data);
-        this.reports = this._reportsInfo.map( e => e.Name );
-        console.log('this.reports:', this.reports);
-        
     }
 
+    
 
 }
 
