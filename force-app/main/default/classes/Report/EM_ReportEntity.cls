@@ -10,13 +10,13 @@ public with sharing class EM_ReportEntity {
         @AuraEnabled
         public Decimal totalAmount { get; set; }
         @AuraEnabled
-        public List<EMExpenseController.ExpenseWrapper> expenses { get; set; }
+        public List<EM_ExpenseEntity.ExpenseWrapper> expenses { get; set; }
         public ReportWrapper(
 			Id id,
 			String name,
 			String status,
 			Decimal totalAmount,
-			List<EMExpenseController.ExpenseWrapper> expenses
+			List<EM_ExpenseEntity.ExpenseWrapper> expenses
 			) {
             this.id = id;
             this.name = name;

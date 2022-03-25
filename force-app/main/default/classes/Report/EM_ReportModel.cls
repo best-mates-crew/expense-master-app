@@ -3,7 +3,7 @@ public with sharing class EM_ReportModel {
         List<EM_Report__c> reportsData = [SELECT Id, Name, Status__c, EM_Total_Amount__c, (SELECT Id, Name, EM_Expense_Label__c, EM_Transaction_Amount__c, EM_Reimbursement_Amount__c, EM_Currency__c, EM_Reimbursement_Status__c, EM_Purchase_Date__c, EM_Reimbursement_By__c FROM EM_Expenses__r) FROM EM_Report__c WITH SECURITY_ENFORCED];
         List<EM_ReportEntity.ReportWrapper> reports = new List<EM_ReportEntity.ReportWrapper>();
         for (EM_Report__c rep : reportsData) {
-            List<EMExpenseController.ExpenseWrapper> expenses = new List<EMExpenseController.ExpenseWrapper>();
+            List<EM_ExpenseEntity.ExpenseWrapper> expenses = new List<EM_ExpenseEntity.ExpenseWrapper>();
             for (EM_Expense__c exp : rep.EM_Expenses__r) {
 				Id id = exp.id;
 				String name = exp.Name;
@@ -14,7 +14,7 @@ public with sharing class EM_ReportModel {
 				String exCur = exp.EM_Currency__c;
 				Date purDt = exp.EM_Purchase_Date__c;
 				String reimBy = exp.EM_Reimbursement_By__c;
-                EMExpenseController.ExpenseWrapper expense = new EMExpenseController.ExpenseWrapper(id, name, status, expLbl, trnsAm, reimAm, exCur, purDt, reimBy);
+                EM_ExpenseEntity.ExpenseWrapper expense = new EM_ExpenseEntity.ExpenseWrapper(id, name, status, expLbl, trnsAm, reimAm, exCur, purDt, reimBy);
                 expenses.add(expense);
 			}
 			Id id = rep.id;
