@@ -153,13 +153,12 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <label>EM_Report</label>
+    <label>Report</label>
     <nameField>
-        <displayFormat>REP-{00000}</displayFormat>
         <label>Name</label>
-        <type>AutoNumber</type>
+        <type>Text</type>
     </nameField>
-    <pluralLabel>EM_Reports</pluralLabel>
+    <pluralLabel>Reports</pluralLabel>
     <searchLayouts></searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>

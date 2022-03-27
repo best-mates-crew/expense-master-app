@@ -154,13 +154,13 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <label>EM_Expense</label>
+    <label>Expense</label>
     <nameField>
         <displayFormat>EXP-{00000}</displayFormat>
         <label>Expense Name</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>EM_Expenses</pluralLabel>
+    <pluralLabel>Expenses</pluralLabel>
     <searchLayouts></searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <startsWith>Vowel</startsWith>

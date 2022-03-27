@@ -13,6 +13,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
+                <field>EM_Expense_Label__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
                 <field>EM_Transaction_Amount__c</field>
             </layoutItems>
             <layoutItems>
@@ -24,24 +28,18 @@
                 <field>EM_Currency__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>EM_Purchase_Date__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>EM_Discription__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>EM_Category__c</field>
-            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>EM_Reimbursement_Status__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>EM_Reimbursement_By__c</field>
+                <behavior>Required</behavior>
+                <field>EM_Report__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -52,11 +50,9 @@
                 <field>EM_Attendees__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>EM_Report__c</field>
+                <behavior>Edit</behavior>
+                <field>EM_Reimbursement_By__c</field>
             </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>OwnerId</field>
