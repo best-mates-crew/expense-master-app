@@ -1,6 +1,8 @@
 public with sharing class EM_ReportModel {
     public static List<EM_ReportEntity.ReportWrapper> getReport() {
-        List<EM_Report__c> reportsData = [SELECT Id, Name, Status__c, EM_Total_Amount__c, (SELECT Id, Name, EM_Expense_Label__c, EM_Transaction_Amount__c, EM_Reimbursement_Amount__c, EM_Currency__c, EM_Reimbursement_Status__c, EM_Purchase_Date__c, EM_Reimbursement_By__c FROM EM_Expenses__r) FROM EM_Report__c WITH SECURITY_ENFORCED];
+        List<EM_Report__c> reportsData = [SELECT Id, Name, Status__c, EM_Total_Amount__c, 
+											(SELECT Id, Name, EM_Expense_Label__c, EM_Transaction_Amount__c, EM_Reimbursement_Amount__c, EM_Currency__c, EM_Reimbursement_Status__c, EM_Purchase_Date__c, EM_Reimbursement_By__c FROM EM_Expenses__r) 
+											FROM EM_Report__c WITH SECURITY_ENFORCED];
         List<EM_ReportEntity.ReportWrapper> reports = new List<EM_ReportEntity.ReportWrapper>();
         for (EM_Report__c rep : reportsData) {
             List<EM_ExpenseEntity.ExpenseWrapper> expenses = new List<EM_ExpenseEntity.ExpenseWrapper>();
@@ -25,5 +27,12 @@ public with sharing class EM_ReportModel {
             reports.add(report);
         }
         return reports;
+    }
+
+	public static void getReportsTotalAmount() {
+        List<EM_Report__c> lstRep = [SELECT Id, Name, EM_Total_Amount__c, 
+                                        (SELECT id, EM_Transaction_Amount__c FROM EM_Expenses__r) 
+                                    FROM EM_Report__c WITH SECURITY_ENFORCED];
+        EM_ReportService.recalculateReportsTotalAmount(lstRep);
     }
 }
