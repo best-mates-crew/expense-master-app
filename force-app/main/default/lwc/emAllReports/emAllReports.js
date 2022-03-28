@@ -23,9 +23,9 @@ export default class EmAllReports extends LightningElement {
 	}
 
 	getSelectedRows(event) {
-		const selectedRows = event.detail.selectedRows;
-        
-        const payload = { data : selectedRows };
+		const rows = event.detail.selectedRows;
+
+        const payload = { data : rows};
 		publish(this.messageContext, RECORD_SELECTED_CHANNEL, payload);
 	}
 

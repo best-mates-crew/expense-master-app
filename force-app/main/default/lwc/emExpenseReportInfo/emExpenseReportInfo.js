@@ -25,10 +25,9 @@ export default class EmExpenseReportInfo extends LightningElement {
     }
 
     handleMessage(message) {
-        this.reportsInfo = message.data;        
+        this.reportsInfo = message.data;
         console.log('this.reportsInfo', this.reportsInfo);
         this.selectedReportsAmount = this.reportsInfo.reduce((a, b)=> a + b.totalAmount, 0);
-        console.log('this.selectedReportsAmount:', this.selectedReportsAmount);
     }
 
 
