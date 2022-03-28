@@ -1,13 +1,19 @@
 <template>
-	<lightning-card variant="Narrow" title="Expense Info" icon-name="standard:account" >
-		<div>
-			<p>Report Name: {reports}</p>
-			<p>Report Status:</p>
-		</div>
-
-		<div>
-			<p>Expense Name:</p>
-			<p>Expense Status:</p>
-		</div>
-	</lightning-card>
+    <lightning-card variant="Narrow" title="Expense Info" icon-name="standard:account">
+        <template for:each={reportsInfo} for:item="report">
+            <li key={report.id}>
+                <div class="slds-var-p-around_medium lgs-bg">
+                    <lightning-tile label={report.name} type="media">
+                        <lightning-icon slot="media" icon-name="standard:report"></lightning-icon>
+                        <p title={report.totalAmount}>Total Report Amount: {report.totalAmount}</p>
+                        <p title={report.status}>Report Status: {report.status}</p>
+						<template if:true={viewExpense}>
+							<p>Expenses Name: {}</p>
+						</template>
+                    </lightning-tile>
+                </div>
+				<lightning-button variant="base" label="Detail" title="Detail" onclick={reportDetailHandler}></lightning-button>
+            </li>
+        </template>
+    </lightning-card>
 </template>

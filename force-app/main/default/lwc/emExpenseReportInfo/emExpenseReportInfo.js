@@ -1,12 +1,14 @@
 import { LightningElement, wire } from 'lwc';
 import { subscribe, MessageContext } from 'lightning/messageService';
 import RECORD_SELECTED_CHANNEL from '@salesforce/messageChannel/Record_Selected__c';
+import Target from '@salesforce/schema/MacroInstruction.Target';
 
 export default class EmExpenseReportInfo extends LightningElement {
     subscription = null;
-    _reportsInfo;
-    reports;
-    expenses;
+    reportsInfo;
+    reportDetail;
+    viewExpense = false;
+
 
     @wire(MessageContext)
     messageContext;
@@ -24,13 +26,14 @@ export default class EmExpenseReportInfo extends LightningElement {
     }
 
     handleMessage(message) {
-        this._reportsInfo = message.data;
-        console.log('message.data:', message.data);
+        this.reportsInfo = message.data;        
+        console.log('this.reportsInfo', this.reportsInfo);
     }
 
+    reportDetailHandler(event){
+        this.viewExpense = !this.viewExpense;
+    }
     
 
 }
 
-		// this._expensesInfo = this.selectedRows.map((e) => e.expenses.map((el) => " " + el.expenseName));
-		// console.log('this._expensesInfo:', this._expensesInfo);
