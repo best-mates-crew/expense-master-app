@@ -1,13 +1,12 @@
 import { LightningElement, wire } from 'lwc';
 import { subscribe, MessageContext } from 'lightning/messageService';
 import RECORD_SELECTED_CHANNEL from '@salesforce/messageChannel/Record_Selected__c';
-import Target from '@salesforce/schema/MacroInstruction.Target';
 
 export default class EmExpenseReportInfo extends LightningElement {
     subscription = null;
     reportsInfo;
     reportDetail;
-    viewExpense = false;
+    selectedReportsAmount;
 
 
     @wire(MessageContext)
@@ -28,12 +27,10 @@ export default class EmExpenseReportInfo extends LightningElement {
     handleMessage(message) {
         this.reportsInfo = message.data;        
         console.log('this.reportsInfo', this.reportsInfo);
+        this.selectedReportsAmount = this.reportsInfo.reduce((a, b)=> a + b.totalAmount, 0);
+        console.log('this.selectedReportsAmount:', this.selectedReportsAmount);
     }
 
-    reportDetailHandler(event){
-        this.viewExpense = !this.viewExpense;
-    }
-    
 
 }
 
