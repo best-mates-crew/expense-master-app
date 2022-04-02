@@ -15,21 +15,21 @@ public with sharing class EM_ExpenseEntity {
     	public String expenseLabel { get; set; }
     	@AuraEnabled
     	public Decimal transactionAmount { get; set; }
-    	@AuraEnabled
-    	public Decimal reimbursementAmount { get; set; }
+    	// @AuraEnabled
+    	// public Decimal reimbursementAmount { get; set; }
     	@AuraEnabled
     	public String expenseCurrency { get; set; }
     	@AuraEnabled
     	public Date purchaseDate { get; set; }
     	@AuraEnabled
     	public String reimbursementBy { get; set; }
-    	public ExpenseWrapper(Id id, String name, String status, String expenseLabel, Decimal transactionAmount, Decimal reimbursementAmount, String expenseCurrency, Date purchaseDate, String reimbursementBy) {
+    	public ExpenseWrapper(Id id, String name, String status, String expenseLabel, Decimal transactionAmount, String expenseCurrency, Date purchaseDate, String reimbursementBy) {
     		this.expenseId = id;
     		this.expenseName = name;
     		this.expenseStatus = status;
     		this.expenseLabel = expenseLabel;
     		this.transactionAmount = transactionAmount;
-    		this.reimbursementAmount = reimbursementAmount;
+    		// this.reimbursementAmount = reimbursementAmount;
     		this.expenseCurrency = expenseCurrency;
     		this.purchaseDate = purchaseDate;
     		this.reimbursementBy = reimbursementBy;
