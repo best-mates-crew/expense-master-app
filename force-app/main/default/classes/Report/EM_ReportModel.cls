@@ -12,7 +12,6 @@ public with sharing class EM_ReportModel {
 				String status = exp.EM_Reimbursement_Status__c;
 				String expLbl = exp.EM_Expense_Label__c;
 				Decimal trnsAm = exp.EM_Transaction_Amount__c;
-				// Decimal reimAm = exp.EM_Reimbursement_Amount__c;
 				String exCur = exp.EM_Currency__c;
 				Date purDt = exp.EM_Purchase_Date__c;
 				String reimBy = exp.EM_Reimbursement_By__c;

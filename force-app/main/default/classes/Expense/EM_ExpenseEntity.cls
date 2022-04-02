@@ -15,8 +15,6 @@ public with sharing class EM_ExpenseEntity {
     	public String expenseLabel { get; set; }
     	@AuraEnabled
     	public Decimal transactionAmount { get; set; }
-    	// @AuraEnabled
-    	// public Decimal reimbursementAmount { get; set; }
     	@AuraEnabled
     	public String expenseCurrency { get; set; }
     	@AuraEnabled
@@ -29,7 +27,6 @@ public with sharing class EM_ExpenseEntity {
     		this.expenseStatus = status;
     		this.expenseLabel = expenseLabel;
     		this.transactionAmount = transactionAmount;
-    		// this.reimbursementAmount = reimbursementAmount;
     		this.expenseCurrency = expenseCurrency;
     		this.purchaseDate = purchaseDate;
     		this.reimbursementBy = reimbursementBy;
