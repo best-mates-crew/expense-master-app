@@ -4,12 +4,10 @@
     <columns>NAME</columns>
     <columns>EM_Expense_Label__c</columns>
     <columns>EM_Transaction_Amount__c</columns>
-    <columns>EM_Reimbursement_Amount__c</columns>
     <columns>EM_Currency__c</columns>
     <columns>EM_Purchase_Date__c</columns>
     <columns>EM_Reimbursement_By__c</columns>
     <columns>EM_Reimbursement_Status__c</columns>
-    <columns>EM_Vendor__c</columns>
     <filterScope>Mine</filterScope>
     <label>Expenses List</label>
 </ListView>
