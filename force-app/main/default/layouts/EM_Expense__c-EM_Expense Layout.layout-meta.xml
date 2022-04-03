@@ -20,10 +20,6 @@
                 <field>EM_Transaction_Amount__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>EM_Reimbursement_Amount__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Required</behavior>
                 <field>EM_Currency__c</field>
             </layoutItems>
@@ -40,10 +36,6 @@
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>EM_Report__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>EM_Vendor__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

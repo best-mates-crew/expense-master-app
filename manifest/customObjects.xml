@@ -21,7 +21,7 @@
     </types>
 
     <types>
-        <members>Expense_Master_App_UtilityBar</members>
+        <members>Expense_Master_App_UtilityBar, EM_Reports_Info</members>
         <name>Flexipage</name>
     </types>
 
@@ -36,5 +36,5 @@
     </types>
 
 
-    <version>52.0</version>
+    <version>53.0</version>
 </Package>
